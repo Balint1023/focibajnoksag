@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focibajnokság</title>
+
+    <link rel="stylesheet" href="bajnoksag.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Focibajnokság</h1>
+        </div>
+
+        <section class="eredmenyjelzo">
+
+
+            <h2 class="bal" id="csapat1">CSAP1</h2> <!-- ide kell az első csapat--> 
+            <h2 class="kozep"><span id="eredmenyelso">0</span> - <span id="eredmenymasodik">0</span></h2>   <!-- ^ ide kellenek az eredmények ^  -->  
+            <h2 class="jobb" id="csapat2">CSAP2</h2> <!-- ^ ide kell a második csapat-->
+                
+        </section>
+
+        <div class="timer" ><h3 id="timer">00:00</h3></div> <!--ezt nem tudom hogy kéne de ebbe kell az időt kiírni-->  
+       
+        <section class="gol">
+            <div    class="bal"> 
+                <h3>Gól</h3>
+            </div>
+
+            <div class="kozep">
+                <h3>Hosszabítás</h3>
+            </div>
+            <div class="jobb">
+                <h3>Gól</h3>
+            </div>
+        </section>
+        
+        
+        <section class="gol">
+            <div    class="bal"> 
+                
+                <button class="kor" onclick="increase1()">+</button> <!--ezek már müködnek-->  
+                <button class="kor" onclick="decrease1()">−</button>
+            </div>
+
+            <div class="kozep">
+                
+                <input type="number" name="hosszabitas" id="hosszabitas"> <!--hosszabítás beolvasás innen-->
+                
+            </div>
+            <div class="jobb">
+                
+                <button class="kor" onclick="increase2()">+</button> <!--ezmég nem működik-->
+                <button class="kor" onclick="decrease2()">−</button> 
+            </div>
+        </section>
+
+        <button class="timer" onclick="Hosszabitas()">Hozzáad</button> <!--hosszabítás beolvasás gomb-->
+
+
+        <section class="gol">
+        
+        <h3>Sárga lapok</h3>
+        <ul id="sarga">
+            
+        </ul>
+        
+
+        </section>
+
+
+    </main>
+
+    <script src="code.js"></script>
+</body>
+</html>

@@ -4,12 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Focibajnokság</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="bajnoksag.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Focibajnokság</h1>
-    </div>
+    <main>
+        <div class="container">
+            <h1>Focibajnokság</h1>
+        </div>
+
+        <form>
+            <label>Adja meg a csapat neveket</label> <br><br>
+
+            <label for="csapat1">Csapat1: </label> <br><input type="text" name="csapat1" id="csapat1" > <br>
+
+            <label for="csapat2">Csapat2: </label> <br><input type="text" name="csapat2" id="csapat2"  > <br><br>
+
+            <label for="hossz">Adja meg a meccs hosszát: </label> <br><br> <input type="number" name="hossz" id="hossz" min="1"> <br><br>
+            <a href="eredmenyjelzo.html"><button type="button" onclick="Start()">Kezdés</button></a>
+                <!--
+                    Start() Feladatai 
+                    Beírja a csapatneveket
+                    elíndítja a timer-t
+                    
+                -->
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="code.js"></script>
 </body>
 </html>

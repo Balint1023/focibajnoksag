@@ -1,9 +1,82 @@
 body{
     background-color: lightgray;
+    text-shadow: 3px 3px 10px rgba(2, 2, 2, 0.77);
+}
+
+main{
+    max-width: 80%;
+    margin: auto;
+    padding: auto;
+    
+}
+form{
+    display: block;
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+input{
+    margin: auto;
+    width: 50%;
 }
 
 h1{
     padding-top: 30px;
     text-align: center;
-    text-shadow: 3px 3px 10px rgba(2, 2, 2, 0.77);
+    
+}
+.eredmenyjelzo{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%; 
+    margin: auto;
+    width: 70%;
+    background-color: white;
+    padding: 2%;
+    
+    
+}
+
+.gol{
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%; 
+    margin: auto;
+    padding: 2%;
+    width: 70%;
+    margin-top: -5%;
+    
+}
+.bal{
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; 
+}
+.kozep{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jobb{
+    text-align: center;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+
+.timer{
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 5%;
+}
+.kor{
+    border-radius: 100%;
+    
+}
+ul{
+    list-style-type: none;
 }
