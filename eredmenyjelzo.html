@@ -16,9 +16,9 @@
         <section class="eredmenyjelzo">
 
 
-            <h2 class="bal" id="csapat1">CSAP1</h2> <!-- ide kell az első csapat--> 
+            <h2 class="bal" id="csapat1nev"></h2> <!-- ide kell az első csapat--> 
             <h2 class="kozep"><span id="eredmenyelso">0</span> - <span id="eredmenymasodik">0</span></h2>   <!-- ^ ide kellenek az eredmények ^  -->  
-            <h2 class="jobb" id="csapat2">CSAP2</h2> <!-- ^ ide kell a második csapat-->
+            <h2 class="jobb" id="csapat2nev">CSAP2</h2> <!-- ^ ide kell a második csapat-->
                 
         </section>
 
@@ -47,30 +47,74 @@
 
             <div class="kozep">
                 
-                <input type="number" name="hosszabitas" id="hosszabitas"> <!--hosszabítás beolvasás innen-->
+                <input type="number" name="hosszabitas" id="hosszabitas" min="0"> <!--hosszabítás beolvasás innen-->
                 
             </div>
             <div class="jobb">
                 
-                <button class="kor" onclick="increase2()">+</button> <!--ezmég nem működik-->
-                <button class="kor" onclick="decrease2()">−</button> 
+                <button class="kor" onclick="increase2()">+</button> <!--ez még nem működik-->
+                <button class="kor" onclick="decrease2()">−</button> <!--ez még nem működik-->
             </div>
         </section>
 
         <button class="timer" onclick="Hosszabitas()">Hozzáad</button> <!--hosszabítás beolvasás gomb-->
 
 
-        <section class="gol">
+        <section class="lapok">
         
-        <h3>Sárga lapok</h3>
-        <ul id="sarga">
+        
+            <h3 class="bal">Sárga lapok</h3>
             
-        </ul>
+            <h3 class="jobb">Sárga lapok</h3>
+            
+            <ul id="sarga1"><!--ide kell írni akik az első csapatból kaptak sárga lapot(<li></li> létrehozásával)-->
+                <li>asd</li>
+                <li>asd</li>
+            </ul>
+            <ul class="uljobbra" id="sarga2"><!--ide kell írni akik az masodik csapatból sárga kaptak lapot(<li></li> létrehozásával)-->
+                <li>asd</li>
+                <li>asd</li>
+               
+            </ul>
+          
         
 
         </section>
 
+        <section class="lapok">
+        
+        
+            <h3 class="bal">Piros lapok</h3>
+            
+            <h3 class="jobb">Piros lapok</h3>
+            
+            <ul id="piros1"><!--ide kell írni akik az első csapatból kaptak piros lapot(<li></li> létrehozásával)-->
+                <li>asd</li>
+                <li>asd</li>
+            </ul>
+            <ul class="uljobbra" id="piros2"><!--ide kell írni akik az masodik csapatból piros kaptak lapot(<li></li> létrehozásával)-->
+                <li>asd</li>
+                <li>asd</li>
+               
+            </ul>
+          
+        
 
+        </section>
+
+        <button class="timer" onclick="Lap()">Lap hozzáadása</button>
+
+        <section id="lapkeres" class="lapkeres">
+            <form name="lap" class="lap">
+                <label for="szin">Milyen lapot szeretne adni?</label><br>
+                <label for="lap">Piros</label><input type="radio" name="szin" id="piros" value="piros">
+                <label for="lap">Sárga</label><input type="radio" name="szin" id="sarga" value="sarga"><br>
+
+                <label for="csapat">Melyik csapatnak szeretné adni?</label><br>
+                <label id="" for="csapat"></label>
+            </form>
+        </section>
+        
     </main>
 
     <script src="code.js"></script>
