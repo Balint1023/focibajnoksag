@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Focibajnokság</title>
-    
+
     <link rel="stylesheet" href="bajnoksag.css">
 </head>
+
 <body>
     <main id="main1">
         <div class="container">
@@ -16,13 +18,14 @@
         <form class="formindex">
             <label>Adja meg a csapat neveket</label> <br><br>
 
-            <label for="csapat1">Csapat1: </label> <br><input class="inputindex" type="text" name="csapat1" id="csapat1" > <br>
+            <label for="csapat1">Csapat1: </label> <br><input class="inputindex" type="text" name="csapat1"
+                id="csapat1"> <br>
 
-            <label for="csapat2">Csapat2: </label> <br><input class="inputindex" type="text" name="csapat2" id="csapat2"  > <br><br>
+            <label for="csapat2">Csapat2: </label> <br><input class="inputindex" type="text" name="csapat2"
+                id="csapat2"> <br><br>
 
-            <label for="hossz">Adja meg a meccs hosszát: </label> <br><br> <input class="inputindex" type="number" name="hossz" id="hossz" min="1"> <br><br>
             <button type="button" onclick="Start()">Kezdés</button>
-                <!--
+            <!--
                     Start() Feladatai 
                     Beírja a csapatneveket
                     elíndítja a timer-t
@@ -39,16 +42,19 @@
         <section class="eredmenyjelzo">
 
 
-            <h2 class="bal" id="csapat1nev">CSAP1</h2> <!-- ide kell az első csapat--> 
-            <h2 class="kozep"><span id="eredmenyelso">0</span> - <span id="eredmenymasodik">0</span></h2>   <!-- ^ ide kellenek az eredmények ^  -->  
-            <h2 class="jobb" id="csapat2nev">CSAP2</h2> <!-- ^ ide kell a második csapat-->
-                
+            <h2 class="bal" id="csapat1nev"></h2> <!-- ide kell az első csapat-->
+            <h2 class="kozep"><span id="eredmenyelso">0</span> - <span id="eredmenymasodik">0</span></h2>
+            <!-- ^ ide kellenek az eredmények ^  -->
+            <h2 class="jobb" id="csapat2nev"></h2> <!-- ^ ide kell a második csapat-->
+
         </section>
 
-        <div class="timer" ><h3 id="timer">00:00</h3></div> <!--ezt nem tudom hogy kéne de ebbe kell az időt kiírni-->  
-       
+        <div class="timer">
+            <h3 id="timer">00:00</h3>
+        </div> <!--ezt nem tudom hogy kéne de ebbe kell az időt kiírni-->
+
         <section class="gol">
-            <div    class="bal"> 
+            <div class="bal">
                 <h3>Gól</h3>
             </div>
 
@@ -59,22 +65,22 @@
                 <h3>Gól</h3>
             </div>
         </section>
-        
-        
+
+
         <section class="gol">
-            <div    class="bal"> 
-                
-                <button class="kor" onclick="increase1()">+</button> <!--ezek már müködnek-->  
+            <div class="bal">
+
+                <button class="kor" onclick="increase1()">+</button> <!--ezek már müködnek-->
                 <button class="kor" onclick="decrease1()">−</button>
             </div>
 
             <div class="kozep">
-                
+
                 <input type="number" name="hosszabitas" id="hosszabitas" min="0"> <!--hosszabítás beolvasás innen-->
-                
+
             </div>
             <div class="jobb">
-                
+
                 <button class="kor" onclick="increase2()">+</button> <!--ez még nem működik-->
                 <button class="kor" onclick="decrease2()">−</button> <!--ez még nem működik-->
             </div>
@@ -84,49 +90,46 @@
 
 
         <section class="lapok">
-        
-        
+
+
             <h3 class="bal">Sárga lapok</h3>
-            
+
             <h3 class="jobb">Sárga lapok</h3>
-            
+
             <ul id="sarga1"><!--ide kell írni akik az első csapatból kaptak sárga lapot(<li></li> létrehozásával)-->
-                <li>asd</li>
-                <li>asd</li>
+
             </ul>
-            <ul class="uljobbra" id="sarga2"><!--ide kell írni akik az masodik csapatból sárga kaptak lapot(<li></li> létrehozásával)-->
-                <li>asd</li>
-                <li>asd</li>
-               
+            <ul class="uljobbra" id="sarga2">
+                <!--ide kell írni akik az masodik csapatból sárga kaptak lapot(<li></li> létrehozásával)-->
+
             </ul>
-          
-        
+
+
 
         </section>
 
         <section class="lapok">
-        
-        
+
+
             <h3 class="bal">Piros lapok</h3>
-            
+
             <h3 class="jobb">Piros lapok</h3>
-            
+
             <ul id="piros1"><!--ide kell írni akik az első csapatból kaptak piros lapot(<li></li> létrehozásával)-->
-                <li>asd</li>
-                <li>asd</li>
+
             </ul>
-            <ul class="uljobbra" id="piros2"><!--ide kell írni akik az masodik csapatból piros kaptak lapot(<li></li> létrehozásával)-->
-                <li>asd</li>
-                <li>asd</li>
-               
+            <ul class="uljobbra" id="piros2">
+                <!--ide kell írni akik az masodik csapatból piros kaptak lapot(<li></li> létrehozásával)-->
+
+
             </ul>
-          
-        
+
+
 
         </section>
 
-        <button class="timer" onclick="Lap()">Lap hozzáadása</button>
-        <button class="timer" onclick="Lap()">Új meccs</button>
+        <button class="timer" id="laphozzaadas" onclick="Lap()">Lap hozzáadása</button>
+        <button class="timer" onclick="Start()">Új meccs</button>
 
         <section id="lapkeres" class="lapkeres">
             <form name="lap" class="lap" id="lap">
@@ -135,20 +138,24 @@
                 <label for="lap">Sárga</label><input type="radio" name="szin" id="sarga" value="sarga"><br>
 
                 <label for="csapat">Melyik csapatnak szeretné adni?</label><br>
-                <label id="csapatnev1" for="csapat">csapat1</label><input type="radio" name="csapat" id="csap1" value="1">
-                <label id="csapatnev2" for="csapat">csapat2</label><input type="radio" name="csapat" id="csap2" value="2"><br>
+                <label id="csapatnev1" for="csapat">csapat1</label><input type="radio" name="csapat" id="csap1"
+                    value="1">
+                <label id="csapatnev2" for="csapat">csapat2</label><input type="radio" name="csapat" id="csap2"
+                    value="2"><br>
 
                 <label for="nev">Adja meg a játékos nevét</label><br>
                 <input type="text" name="nev" id="nev"><br>
 
-                <button type="button" onclick="LapHozzaad()">Hozzáadás</button> <!--Beolvassa ebből a Form-bol a cuccokat és elhelyezi a fentebb jelzet megfelelő listába-->
+                <button type="button" onclick="LapHozzaad()">Hozzáadás</button>
+                <!--Beolvassa ebből a Form-bol a cuccokat és elhelyezi a fentebb jelzet megfelelő listába-->
                 <button type="button" onclick="Megse()">Mégse</button>
             </form>
         </section>
-        
+
     </main>
 
-    
+
     <script src="code.js"></script>
 </body>
+
 </html>
