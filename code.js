@@ -1,5 +1,10 @@
 let count1 = 0;
 let count2 = 0; // golok
+let raadas = document.getElementById("hosszabitas").value;
+
+let mp = 0;
+
+
 
 
         // plusz
@@ -45,6 +50,21 @@ let count2 = 0; // golok
             let csap2nev = document.getElementById("csapat2").value;
             document.getElementById("csapat1nev").innerHTML = `${csap1nev}`;
             document.getElementById("csapat2nev").innerHTML = `${csap2nev}`;
+            if (raadas > 20 || raadas < 0)
+            {
+                alert("A hosszabbítás maximum 20 perc lehet és nem lehet negatív!")
+            }
+        }
+        function Idoinditas(){
+            let ido = setInterval(Idoszal, 1000);
+            Idoszal();
+        }
+        function Idoszal(){
+            mp++;
+            if (mp > 10){
+                clearInterval(ido)
+            }
+            document.getElementById("timer").innerHTML = mp;
         }
         function LapHozzaad()
         {
@@ -56,8 +76,8 @@ let count2 = 0; // golok
                 document.getElementById("sarga1").innerHTML += `<li>${jatekosnev}</li>`
             if (cardtype == "sarga" && whichteam == 2)
                 document.getElementById("sarga2").innerHTML += `<li>${jatekosnev}</li>`
-            if (cardtype == "piros" && whichteam == 1)
-                document.getElementById("piros1").innerHTML += `<li>${jatekosnev}</li>`
-            if (cardtype == "piros" && whichteam == 2)
-                document.getElementById("piros2").innerHTML += `<li>${jatekosnev}</li>`
+            if (cardtype == "kiallit" && whichteam == 1)
+                document.getElementById("kiallit1").innerHTML += `<li>${jatekosnev}</li>`
+            if (cardtype == "kiallit" && whichteam == 2)
+                document.getElementById("kiallit2").innerHTML += `<li>${jatekosnev}</li>`
         }

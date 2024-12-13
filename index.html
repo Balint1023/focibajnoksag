@@ -59,7 +59,7 @@
             </div>
 
             <div class="kozep">
-                <h3>Hosszabítás</h3>
+                <h3>Hosszabítás (max 20 perc)</h3>
             </div>
             <div class="jobb">
                 <h3>Gól</h3>
@@ -76,7 +76,7 @@
 
             <div class="kozep">
 
-                <input type="number" name="hosszabitas" id="hosszabitas" min="0"> <!--hosszabítás beolvasás innen-->
+                <input type="number" name="hosszabitas" id="hosszabitas" min="0" max="20"> <!--hosszabítás beolvasás innen-->
 
             </div>
             <div class="jobb">
@@ -105,21 +105,20 @@
             </ul>
 
 
-
         </section>
 
         <section class="lapok">
 
 
-            <h3 class="bal">Piros lapok</h3>
+            <h3 class="bal">Kiállítás</h3>
 
-            <h3 class="jobb">Piros lapok</h3>
+            <h3 class="jobb">Kiállítás</h3>
 
-            <ul id="piros1"><!--ide kell írni akik az első csapatból kaptak piros lapot(<li></li> létrehozásával)-->
+            <ul id="kiallit1"><!--ide kell írni akik az első csapatból kaptak kiállítást(<li></li> létrehozásával)-->
 
             </ul>
-            <ul class="uljobbra" id="piros2">
-                <!--ide kell írni akik az masodik csapatból piros kaptak lapot(<li></li> létrehozásával)-->
+            <ul class="uljobbra" id="kiallit2">
+                <!--ide kell írni akik az masodik csapatból kaptak kiállítáat(<li></li> létrehozásával)-->
 
 
             </ul>
@@ -129,12 +128,12 @@
         </section>
 
         <button class="timer" id="laphozzaadas" onclick="Lap()">Lap hozzáadása</button>
-        <button class="timer" onclick="Start()">Új meccs</button>
+        <button class="timer" onclick="Idoinditas()">Indítás</button>
 
         <section id="lapkeres" class="lapkeres">
             <form name="lap" class="lap" id="lap">
                 <label for="szin">Milyen lapot szeretne adni?</label><br>
-                <label for="lap">Piros</label><input type="radio" name="szin" id="piros" value="piros">
+                <label for="lap">Kiállítás (2 perc)</label><input type="radio" name="szin" id="kiallit" value="kiallit">
                 <label for="lap">Sárga</label><input type="radio" name="szin" id="sarga" value="sarga"><br>
 
                 <label for="csapat">Melyik csapatnak szeretné adni?</label><br>
