@@ -2,11 +2,11 @@ let count1 = 0;
 let count2 = 0; // golok
 let ido, ido2, ido3, ido4;
 let mp = 0;
-let minutes = 10;
+let minutes = 0;
 let mp2 = 0;
 let minutes2 = 0;
 let mp3 = 0;
-let minutes3 = 19;
+let minutes3 = 10;
 let mp4 = 0;
 let minutes4 = 0;
 let raadas = document.getElementById("hosszabitas");
